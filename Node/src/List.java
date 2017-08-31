@@ -23,34 +23,15 @@ public class List {
 	}
 	
 	public List (String name, Node firstNode, Node lastNode) {
-		setNode(name, firstNode, lastNode);
+		setList(name, firstNode, lastNode);
 	}
 	
-	public void setNode(String name, Node firstNode, Node lastNode) {
+	public void setList(String name, Node firstNode, Node lastNode) {
 		setName(name);
 		setFirstNode(firstNode);
 		setLastNode(lastNode);
 	}
-	
-	/*
-	 *  Check for Empty List
-	 */
-	public boolean isEmpty() {
-		return (firstNode == null);
-	}
-	
-	/*
-	 * Insert Item at Front
-	 */
-	public void insertAtFront(Object insertItem) {
-		if(isEmpty()) {
-			firstNode = lastNode = new Node(insertItem);
-		} else {
-			firstNode = new Node(insertItem, firstNode);
-		}
-		
-	}
-	
+
 	public Node getFirstNode() {
 		return firstNode;
 	}
@@ -73,5 +54,24 @@ public class List {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	/*
+	 *  Check for Empty List
+	 */
+	public boolean isEmpty() {
+		return (firstNode == null);
+	}
+	
+	/*
+	 * Insert Item at Front
+	 */
+	public void insertAtFront(Object insertItem) {
+		if(isEmpty()) {
+			firstNode = lastNode = new Node(insertItem);
+		} else {
+			firstNode = new Node(insertItem, firstNode);
+		}
+		
 	}
 }
