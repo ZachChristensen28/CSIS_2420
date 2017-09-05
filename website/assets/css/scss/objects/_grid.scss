@@ -1,0 +1,66 @@
+.grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas: 
+        ". heading ."
+        ". week1-title ."
+        ". week1-work .";
+}
+.heading{
+    grid-area: heading;
+}
+h2.week1-title{
+    grid-area: week1-title;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+}
+.week1-title i{
+    justify-self: end;
+}
+.week1-work{
+    grid-area: week1-work;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'ex1'
+        'week-work'
+        'ex2'
+        'week-work2';
+}
+
+button.week1{
+    grid-area: button;
+    justify-self: start;
+    align-self: center;
+}
+p.week1ex1{
+    grid-area: ex1;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    cursor: pointer;
+}
+p.week1ex1 i{
+    justify-self: end;
+}
+
+div#week1{
+    grid-area: week-work;
+}
+.week1ex2{
+    grid-area: ex2;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    cursor: pointer;
+}
+.week1ex2 i{
+    justify-self: end;
+}
+#week1ex2-work{
+    grid-area: week-work2;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}

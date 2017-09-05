@@ -1,0 +1,31 @@
+@import 'fonts';
+html{
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: $body;
+        color: $medium-gray;
+    }
+}
+
+h1{
+    font-family: $heading;
+    font-size: 34px;
+    color: $dark-blue;
+}
+h1 small{
+    font-size: 28px;
+}
+h2{
+    font-family: $heading;
+    font-size: 26px;
+    color: $dark-gray;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color: $light-gray;
+}
