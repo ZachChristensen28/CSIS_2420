@@ -32,7 +32,9 @@ h2.week1-title{
         'ex1'
         'week-work'
         'ex2'
-        'week-work2';
+        'week-work2'
+        'ex3'
+        'week-work3';
 }
 
 button.week1{
@@ -64,6 +66,21 @@ div#week1{
 }
 #week1ex2-work{
     grid-area: week-work2;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+.week1ex3{
+    grid-area: ex3;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    cursor: pointer;
+}
+.week1ex3 i{
+    justify-self: end;
+}
+#week1ex3-work{
+    grid-area: week-work3;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr;

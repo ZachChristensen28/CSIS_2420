@@ -4,6 +4,7 @@ public class NodeTest {
 
 	public static void main(String[] args) {
 		
+		
 		Character ch = new Character('$');
 		BigInteger bi = new BigInteger("1234567891011121314151617181920");
 		

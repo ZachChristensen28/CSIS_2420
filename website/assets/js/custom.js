@@ -25,4 +25,13 @@ $(function (){
         }
         
     });
+    $('p.week1ex3').on('click', function(){
+        $('#week1ex3-work').slideToggle();
+        if($('p.week1ex3>i').hasClass('fa-minus-circle')){
+            $('p.week1ex3>i').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+        } else {
+            $('p.week1ex3>i').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+        }
+
+    });
 });
