@@ -11,8 +11,12 @@ public class NodeTest {
 		Node n1 = new Node(bi);
 		Node n2 = new Node(ch, n1);
 		
-		System.out.println(n2.getData());
-		System.out.println(n1.getData());
-		System.out.println(n2.getNext().getData());
+		for(int i = 99; i > 0; i--) {
+			
+		}
+		
+		System.out.println(n2.getObject());
+		System.out.println(n1.getObject());
+		System.out.println(n2.getNext().getObject());
 	}
 }

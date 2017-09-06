@@ -6,20 +6,20 @@ public class Node {
 	
 	
 	public Node (Object obj) {
-		setData(obj);
+		setObject(obj);
 		this.next = null;
 	}
 	
 	public Node (Object obj, Node next) {
-		setData(obj);
+		setObject(obj);
 		setNext(next);
 	}
 
-	public Object getData() {
+	public Object getObject() {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setObject(Object data) {
 		this.data = data;
 	}
 
@@ -32,3 +32,4 @@ public class Node {
 	}
 	
 }
+

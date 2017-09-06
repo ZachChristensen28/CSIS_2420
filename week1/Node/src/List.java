@@ -16,9 +16,9 @@ public class List {
 		firstNode = lastNode = null;
 	}
 	
-	public List (String name, Node firtNode) {
+	public List (String name, Node firstNode) {
 		setName(name);
-		setFirstNode(firtNode);
+		setFirstNode(firstNode);
 		lastNode = null;
 	}
 	
@@ -65,6 +65,7 @@ public class List {
 	
 	/*
 	 * Insert Item at Front
+	 * @param Object
 	 */
 	public void insertAtFront(Object insertItem) {
 		if(isEmpty()) {
@@ -72,6 +73,54 @@ public class List {
 		} else {
 			firstNode = new Node(insertItem, firstNode);
 		}
-		
+	}
+	/*
+	 * Insert Item at Back
+	 * @param Object
+	 */
+	public void insertAtBack(Object insertItem) {
+		if(isEmpty()) {
+			firstNode = lastNode = new Node(insertItem);
+		} else {
+			lastNode.setNext(new Node(insertItem));
+			lastNode = lastNode.getNext();
+		}
+	}
+	/*
+	 * Remove from front of list
+	 * @return Object
+	 */
+	public Object removeFromFront() {
+		Object removeItem = null;
+		if(isEmpty()) {
+			removeItem = "This List is empty.";
+			return removeItem;
+		} 
+		removeItem = firstNode.getObject();
+		if(firstNode.equals(lastNode)) {
+			firstNode = lastNode = null;
+		} else {
+			firstNode = firstNode.getNext();
+		}
+		return removeItem;
+	}
+	/*
+	 * Print List
+	 * @return String
+	 */
+	public String print() {
+		String result = "";
+		String newLine = "\n";
+		if(isEmpty()) {
+			result += "Empty " + name + newLine;
+			return result;
+		}
+		result += name + " contains: " + newLine;
+		Node current = firstNode;
+		while(current != null) {
+			result += current.getObject() + newLine;
+			current = current.getNext();
+		}
+		return result;
 	}
 }
