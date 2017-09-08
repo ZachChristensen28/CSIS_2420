@@ -5,27 +5,27 @@ public class List {
 	private Node firstNode;
 	private Node lastNode;
 	private String name;
-	
-	public List () {
+
+	public List() {
 		name = "default list";
 		firstNode = lastNode = null;
 	}
-	
-	public List (String name) {
+
+	public List(String name) {
 		setName(name);
 		firstNode = lastNode = null;
 	}
-	
-	public List (String name, Node firstNode) {
+
+	public List(String name, Node firstNode) {
 		setName(name);
 		setFirstNode(firstNode);
 		lastNode = null;
 	}
-	
-	public List (String name, Node firstNode, Node lastNode) {
+
+	public List(String name, Node firstNode, Node lastNode) {
 		setList(name, firstNode, lastNode);
 	}
-	
+
 	public void setList(String name, Node firstNode, Node lastNode) {
 		setName(name);
 		setFirstNode(firstNode);
@@ -55,69 +55,104 @@ public class List {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	/*
-	 *  Check for Empty List
+	 * Check for Empty List
 	 */
 	public boolean isEmpty() {
 		return (firstNode == null);
 	}
-	
+
 	/*
 	 * Insert Item at Front
+	 * 
 	 * @param Object
 	 */
 	public void insertAtFront(Object insertItem) {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			firstNode = lastNode = new Node(insertItem);
 		} else {
 			firstNode = new Node(insertItem, firstNode);
 		}
 	}
+
 	/*
 	 * Insert Item at Back
+	 * 
 	 * @param Object
 	 */
 	public void insertAtBack(Object insertItem) {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			firstNode = lastNode = new Node(insertItem);
 		} else {
 			lastNode.setNext(new Node(insertItem));
 			lastNode = lastNode.getNext();
 		}
 	}
+
 	/*
 	 * Remove from front of list
+	 * 
 	 * @return Object
 	 */
 	public Object removeFromFront() {
 		Object removeItem = null;
-		if(isEmpty()) {
+		if (isEmpty()) {
 			removeItem = "This List is empty.";
 			return removeItem;
-		} 
+		}
 		removeItem = firstNode.getObject();
-		if(firstNode.equals(lastNode)) {
+		if (firstNode.equals(lastNode)) {
 			firstNode = lastNode = null;
 		} else {
 			firstNode = firstNode.getNext();
 		}
 		return removeItem;
 	}
+
+	/*
+	 * Remove from Back of list
+	 * 
+	 * @return Object
+	 */
+	public Object removeFromBack() {
+		Object removeItem = null;
+		if (isEmpty()) {
+			removeItem = "This List is empty.";
+			return removeItem;
+		}
+		removeItem = lastNode.getObject();
+		if (firstNode.equals(lastNode)) {
+			firstNode = lastNode = null;
+		} else {
+			Node current = firstNode;
+			Node before = null;
+			while (current.getNext() != null) {
+				before = current;
+				current = current.getNext();
+			}
+			before.setNext(current.getNext());
+			lastNode = before;
+
+		}
+		return removeItem;
+	}
+
 	/*
 	 * Print List
+	 * 
 	 * @return String
 	 */
 	public String print() {
 		String result = "";
 		String newLine = "\n";
-		if(isEmpty()) {
-			result += "Empty " + name + newLine;
+		if (isEmpty()) {
+			result += name + " is Empty" + newLine;
 			return result;
 		}
 		result += name + " contains: " + newLine;
 		Node current = firstNode;
-		while(current != null) {
+		while (current != null) {
 			result += current.getObject() + newLine;
 			current = current.getNext();
 		}

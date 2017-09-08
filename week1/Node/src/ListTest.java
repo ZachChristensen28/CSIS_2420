@@ -12,23 +12,30 @@ public class ListTest {
 		
 		List myList = new List();
 		
+		//Insert At Front
 		myList.insertAtFront(ch);
 		myList.insertAtFront(bi1);
 		myList.insertAtFront(bi2);
 		myList.insertAtFront(bi3);
+		
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		
+		//Insert At Back
 		myList.insertAtBack(ch);
+		myList.insertAtBack(bi1);
+		myList.insertAtBack(bi2);
+		myList.insertAtBack(bi3);
 		
 		System.out.println(myList.print());
-		
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
+		myList.removeFromBack();
 		System.out.println(myList.print());
 	}
 
