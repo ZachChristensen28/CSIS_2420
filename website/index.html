@@ -34,8 +34,7 @@
           <img src="assets/img/bigFactorialSnapshot.png" width="900px" alt="Big Factorial Work">
         </div>
         <p class="week1ex2">Ex 2:&nbsp;&nbsp;Test your environment by writing a static method that takes positive integer n as input and outputs an array of n random integers in the range 0 → 1,000,000. Test this method by calling it on n = 100 and printing the result.
-          <i
-            class="fa fa-plus-circle" aria-hidden="true"></i>
+          <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
         <div id="week1ex2-work" style="display: none;" class="week-work">
           <img src="assets/img/week1ex2.png" width="500px" alt="Week 1 problem 2 code">
@@ -48,27 +47,27 @@
           <img src="assets/img/ex3code.png" alt="Code for Node">
           <code>
                      <pre>
-  public class NodeTest {
+          public class NodeTest {
 
-  	public static void main(String[] args) {
+          	public static void main(String[] args) {
 
-  		Node n[] = new Node[101];
+          		Node n[] = new Node[101];
 
-  		for (int i = 100; i > 0; i--) {
-  			for(int j = i; j > 0; j--) {
-  				int x = j * j;
-  				n[j] = new Node(x);
-  			}
-  			n[i].setNext(n[i - 1]);
-  		}
-  		System.out.println("Node 100: " + n[100].getObject());
-  		for (int i = 100; i > 1; i--) {
-  			int counter = i - 1;
-  			System.out.println("Node " + counter  + ": "
-  			+ n[i].getNext().getObject());
-  		}
-  	}
-  }
+          		for (int i = 100; i > 0; i--) {
+          			for(int j = i; j > 0; j--) {
+          				int x = j * j;
+          				n[j] = new Node(x);
+          			}
+          			n[i].setNext(n[i - 1]);
+          		}
+          		System.out.println("Node 100: " + n[100].getObject());
+          		for (int i = 100; i > 1; i--) {
+          			int counter = i - 1;
+          			System.out.println("Node " + counter  + ": "
+          			+ n[i].getNext().getObject());
+          		}
+          	}
+          }
               </pre>
                   </code>
         </div>
