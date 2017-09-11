@@ -2,78 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
 
-    <title>CSIS 2420 | Zachary Christensen</title>
+  <title>CSIS 2420 | Zachary Christensen</title>
 
-    <link rel="stylesheet" href="assets/css/main/css/main.css">
+  <link rel="stylesheet" href="assets/css/main/css/main.css">
 
-    <!--Hello Fellow Nerd! This website was created for the sole purpose to show my CSIS 2420 classwork. A pointless yet fun project to practice the techniques of css grid.-->
+  <!--Hello Fellow Nerd! This website was created for the sole purpose to show my CSIS 2420 classwork. A pointless yet fun project to practice the techniques of css grid.-->
 </head>
 
 <body>
+  <div class="site-container">
     <div class="grid">
-        <h1 class="heading">Zachary Christensen <br><small>CSIS 2420 Weekly Assignments <br><a href="mailto:zacharychristensen@suumail.net">zacharychristensen@suumail.net</a></small></h1>
-        <h2 class="week1-title">Week 1 <i class="fa fa-minus-square" aria-hidden="true"></i></h2>
-        <div class="week1-work">
-            <p class="week1ex1">Ex 1:&nbsp;&nbsp;For each of these pre-computer data structures, describe the problems they solve and any associated algorithms they use. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-            <div id="week1" style="display: none;" class="week-work">
-                <ul>
-                    <li>List: Takes something that is disorganized and makes it more organized in the format of a list of items. </li>
-                    <li>Chart: Displays data in a more visually appealing way to help with organization.</li>
-                    <li>File cabinet: Give you the ability to sort and store files in such a way that makes them easily accessible. </li>
-                    <li>Dictionary: List of words, sorted alpabetically, to help find the definition and correct spelling. </li>
-                    <li>Map: Organizes locations in such a way that makes them easier to find.</li>
-                    <li>Rolodex: A list that has all of your contact information in one place. Sorting alphabetically increases productivity.</li>
-                    <li>Library: A collection of books/ magazines that are stored in one location. Typically sorted alphabetically and also by type.</li>
-                    <li>Calender: Organizes time. You can have all of your appointments/ events in one place to better keep track of time.</li>
-                </ul>
-                <p>Big Factorial</p>
-                <img src="assets/img/bigFactorialSnapshot.png" width="900px" alt="Big Factorial Work">
-            </div>
-            <p class="week1ex2">Ex 2:&nbsp;&nbsp;Test your environment by writing a static method that takes positive integer n as input and outputs an array of n random integers in the range 0 → 1,000,000. Test this method by calling it on n = 100 and printing the result.<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-            <div id="week1ex2-work" style="display: none;" class="week-work">
-                <img src="assets/img/week1ex2.png" width="500px" alt="Week 1 problem 2 code">
-                <img src="assets/img/week1ex2compiled.png" width="300px" alt="Week 1 problem 2 compiled code">
-            </div>
-            <p class="week1ex3">Ex 3:&nbsp;&nbsp;Using only the Node class, build a linked list that stores all the squares from 1 to 100. Then migrate through the list and print out the squares. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-            <div id="week1ex3-work" style="display: none;" class="week-work">
-                <img src="assets/img/1-50.png" alt="Terminal Node 1 - 50" height="700px">
-                <img src="assets/img/50-100.png" alt="Terminal Node 50 - 100" height="700px">
-                <img src="assets/img/ex3code.png" alt="Code for Node">
-                <code>
-                   <pre>
-public class NodeTest {
-
-	public static void main(String[] args) {
-
-		Node n[] = new Node[101];
-
-		for (int i = 100; i > 0; i--) {
-			for(int j = i; j > 0; j--) {
-				int x = j * j;
-				n[j] = new Node(x);
-			}
-			n[i].setNext(n[i - 1]);
-		}
-		System.out.println("Node 100: " + n[100].getObject());
-		for (int i = 100; i > 1; i--) {
-			int counter = i - 1;
-			System.out.println("Node " + counter  + ": "
-			+ n[i].getNext().getObject());
-		}
-	}
-}
-               </pre>
-                </code>
-            </div>
+      <h1 class="heading">Zachary Christensen <br><small>CSIS 2420 Weekly Assignments <br><a href="mailto:zacharychristensen@suumail.net">zacharychristensen@suumail.net</a></small></h1>
+      <h2 class="week1-title">Week 1 <i class="fa fa-minus-square" aria-hidden="true"></i></h2>
+      <div class="week1-work">
+        <p class="week1ex1">Ex 1:&nbsp;&nbsp;For each of these pre-computer data structures, describe the problems they solve and any associated algorithms they use. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div id="week1" style="display: none;" class="week-work">
+          <ul>
+            <li>List: Takes something that is disorganized and makes it more organized in the format of a list of items. </li>
+            <li>Chart: Displays data in a more visually appealing way to help with organization.</li>
+            <li>File cabinet: Give you the ability to sort and store files in such a way that makes them easily accessible. </li>
+            <li>Dictionary: List of words, sorted alpabetically, to help find the definition and correct spelling. </li>
+            <li>Map: Organizes locations in such a way that makes them easier to find.</li>
+            <li>Rolodex: A list that has all of your contact information in one place. Sorting alphabetically increases productivity.</li>
+            <li>Library: A collection of books/ magazines that are stored in one location. Typically sorted alphabetically and also by type.</li>
+            <li>Calender: Organizes time. You can have all of your appointments/ events in one place to better keep track of time.</li>
+          </ul>
+          <p>Big Factorial</p>
+          <img src="assets/img/bigFactorialSnapshot.png" width="900px" alt="Big Factorial Work">
         </div>
-    </div>
+        <p class="week1ex2">Ex 2:&nbsp;&nbsp;Test your environment by writing a static method that takes positive integer n as input and outputs an array of n random integers in the range 0 → 1,000,000. Test this method by calling it on n = 100 and printing the result.
+          <i
+            class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+        <div id="week1ex2-work" style="display: none;" class="week-work">
+          <img src="assets/img/week1ex2.png" width="500px" alt="Week 1 problem 2 code">
+          <img src="assets/img/week1ex2compiled.png" width="300px" alt="Week 1 problem 2 compiled code">
+        </div>
+        <p class="week1ex3">Ex 3:&nbsp;&nbsp;Using only the Node class, build a linked list that stores all the squares from 1 to 100. Then migrate through the list and print out the squares. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div id="week1ex3-work" style="display: none;" class="week-work">
+          <img src="assets/img/1-50.png" alt="Terminal Node 1 - 50" height="700px">
+          <img src="assets/img/50-100.png" alt="Terminal Node 50 - 100" height="700px">
+          <img src="assets/img/ex3code.png" alt="Code for Node">
+          <code>
+                     <pre>
+  public class NodeTest {
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://use.fontawesome.com/f4acd7f675.js"></script>
+  	public static void main(String[] args) {
+
+  		Node n[] = new Node[101];
+
+  		for (int i = 100; i > 0; i--) {
+  			for(int j = i; j > 0; j--) {
+  				int x = j * j;
+  				n[j] = new Node(x);
+  			}
+  			n[i].setNext(n[i - 1]);
+  		}
+  		System.out.println("Node 100: " + n[100].getObject());
+  		for (int i = 100; i > 1; i--) {
+  			int counter = i - 1;
+  			System.out.println("Node " + counter  + ": "
+  			+ n[i].getNext().getObject());
+  		}
+  	}
+  }
+              </pre>
+                  </code>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://use.fontawesome.com/f4acd7f675.js"></script>
 </body>
 
 </html>

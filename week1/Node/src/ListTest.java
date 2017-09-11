@@ -37,6 +37,8 @@ public class ListTest {
 		System.out.println(myList.print());
 		myList.removeFromBack();
 		System.out.println(myList.print());
+		myList.removeFromBack();
+		System.out.println(myList.print());
 	}
 
 }

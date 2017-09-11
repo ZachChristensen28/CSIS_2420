@@ -133,7 +133,6 @@ public class List {
 			}
 			before.setNext(current.getNext());
 			lastNode = before;
-
 		}
 		return removeItem;
 	}
