@@ -84,10 +84,10 @@
 #week1ex3-work {
   @extend %examples-work;
   grid-area: week-work3;
-}
 
-#week1ex3-work img:nth-child(3) {
-  max-width: 500px;
+  img:nth-child(3) {
+    max-width: 500px;
+  }
 }
 
 .week2-title {

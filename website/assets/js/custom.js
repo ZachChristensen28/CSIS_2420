@@ -1,18 +1,43 @@
 $(function() {
-  $('.week1-title').on('click', function() {
-    $('.week1-work').slideToggle();
-    if ($('.week1-title>i').hasClass('fa-minus-square')) {
-      $('.week1-title>i').removeClass('fa-minus-square').addClass('fa-plus-square');
+  /**
+   * Title slide toggle
+   * @param  {String} title class of h tag
+   * @param  {String} work  class of div
+   */
+  $.titleSlide = function(title, work) {
+    var t = title + '>i';
+    var w = work;
+
+    $(w).slideToggle();
+    if ($(t).hasClass('fa-minus-square')) {
+      $(t).removeClass('fa-minus-square').addClass('fa-plus-square');
     } else {
-      $('.week1-title>i').removeClass('fa-plus-square').addClass('fa-minus-square');
+      $(t).removeClass('fa-plus-square').addClass('fa-minus-square');
     }
+  };
+
+  /**
+   * Week 1 slideToggle
+   */
+  $('.week1-title').on('click', function() {
+    var title = '.week1-title';
+    var work = '.week1-work';
+    $.titleSlide(title, work);
   });
-  /*
-   *
+
+  /**
+   * Week2 slideToggle
+   */
+  $('.week2-title').on('click', function() {
+    var title = '.week2-title';
+    var work = '.week2-work';
+    $.titleSlide(title, work);
+  });
+
+  /**
    * Slide toggle function
-   * @param String
-   * @param String
-   *
+   * @param {String}
+   * @param {String}
    */
   $.slideThisShit = function(newId, newClass) {
     var c = 'p.' + newClass + '>i';
