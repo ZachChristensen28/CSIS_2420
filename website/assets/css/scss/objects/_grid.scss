@@ -19,11 +19,6 @@
   }
 }
 
-.week1-title {
-  @extend %week-title;
-  grid-area: week1-title;
-}
-
 %week-work {
   border-bottom: 1px solid;
   border-left: 1px solid;
@@ -34,22 +29,20 @@
   padding: 0 10px 10px;
 }
 
+.week1-title {
+  @extend %week-title;
+  grid-area: week1-title;
+}
+
 .week1-work {
   @extend %week-work;
   grid-area: week1-work;
   grid-template-areas: 'ex1' 'week-work' 'ex2' 'week-work2' 'ex3' 'week-work3';
 }
 
-button.week1 {
-  grid-area: button;
-  justify-self: start;
-  align-self: center;
-}
-
-p.week1ex1 {
+%examples {
   cursor: pointer;
   display: grid;
-  grid-area: ex1;
   grid-template-columns: 5fr 1fr;
 
   i {
@@ -57,44 +50,39 @@ p.week1ex1 {
   }
 }
 
-div#week1 {
+%examples-work {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.week1ex1 {
+  @extend %examples;
+  grid-area: ex1;
+}
+
+#week1 {
   grid-area: week-work;
 }
 
 .week1ex2 {
-  cursor: pointer;
-  display: grid;
+  @extend %examples;
   grid-area: ex2;
-  grid-template-columns: 5fr 1fr;
-
-  i {
-    justify-self: end;
-  }
 }
 
 #week1ex2-work {
+  @extend %examples-work;
   grid-area: week-work2;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 1fr 1fr;
 }
 
 .week1ex3 {
-  cursor: pointer;
-  display: grid;
+  @extend %examples;
   grid-area: ex3;
-  grid-template-columns: 5fr 1fr;
-
-  i {
-    justify-self: end;
-  }
 }
 
 #week1ex3-work {
-  display: grid;
+  @extend %examples-work;
   grid-area: week-work3;
-  grid-gap: 5px;
-  grid-template-columns: 1fr 1fr;
 }
 
 #week1ex3-work img:nth-child(3) {
