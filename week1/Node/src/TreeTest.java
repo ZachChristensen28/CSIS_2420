@@ -16,7 +16,10 @@ public class TreeTest {
 			myTree.insertNode(myTree.getRoot(), n);
 		}
 		
-		System.out.println("\n" + myTree.getRoot().getKey());
+		//System.out.println("\n" + myTree.getRoot().getKey());
+		System.out.println("\n after inOrderTraversal");
+		
+		myTree.inOrderTraversal(myTree.getRoot());
 	}
 
 }

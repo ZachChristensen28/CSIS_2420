@@ -5,6 +5,7 @@ public class List {
 	private Node firstNode;
 	private Node lastNode;
 	private String name;
+	private int counter;
 
 	public List() {
 		name = "default list";
@@ -82,6 +83,7 @@ public class List {
 	 * @param Object
 	 */
 	public void insertAtBack(Object insertItem) {
+		counter++;
 		if (isEmpty()) {
 			firstNode = lastNode = new Node(insertItem);
 		} else {
@@ -136,7 +138,12 @@ public class List {
 		}
 		return removeItem;
 	}
-
+	/*
+	 * prints the count
+	 */
+	public String printCount() {
+		return "Number of elements: " + counter;
+	}
 	/*
 	 * Print List
 	 * 
@@ -149,7 +156,6 @@ public class List {
 			result += name + " is Empty" + newLine;
 			return result;
 		}
-		result += name + " contains: " + newLine;
 		Node current = firstNode;
 		while (current != null) {
 			result += current.getObject() + newLine;
