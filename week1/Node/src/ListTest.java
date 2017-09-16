@@ -12,24 +12,59 @@ public class ListTest {
 		
 		List myList = new List();
 		
+		/*//Insert At Front
 		myList.insertAtFront(ch);
 		myList.insertAtFront(bi1);
 		myList.insertAtFront(bi2);
-		myList.insertAtFront(bi3);
+		myList.insertAtFront(bi3);*/
+		
+		/*System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());
+		myList.removeFromFront();
+		System.out.println(myList.print());*/
+		
+		/*//Insert At Back
 		myList.insertAtBack(ch);
+		myList.insertAtBack(bi1);
+		myList.insertAtBack(bi2);
+		myList.insertAtBack(bi3);
 		
+		//Remove from back
 		System.out.println(myList.print());
+		myList.removeFromBack();
+		System.out.println(myList.print());
+		myList.removeFromBack();
+		System.out.println(myList.print());
+		myList.removeFromBack();
+		System.out.println(myList.print());
+		myList.removeFromBack();
+		System.out.println(myList.print());*/
 		
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
-		myList.removeFromFront();
-		System.out.println(myList.print());
+		//list squares
+		List zachsList = new List();
+		
+		for(int i = 1; i < 101; i++) {
+			int x = i * i;
+			zachsList.insertAtBack(x);
+		}
+		
+		/*for(int i = 0; i < 2; i++) {
+			System.out.print(zachsList.print());
+		}*/
+		
+		
+		/*//First node = last node
+		List zachsList = new List();
+		zachsList.getLastNode().setNext(zachsList.getFirstNode());
+		System.out.println(zachsList.print()); */
+		
+		//Counter
+		System.out.println(zachsList.printCount());
 	}
 
 }
