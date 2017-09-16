@@ -142,6 +142,7 @@ public class List {
 	 * prints the count
 	 */
 	public String printCount() {
+		//counter is global private variable
 		return "Number of elements: " + counter;
 	}
 	/*

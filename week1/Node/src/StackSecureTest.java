@@ -9,7 +9,7 @@ public class StackSecureTest {
 
 	public static void main(String[] args) {
 		
-		Character ch = new Character('$');
+		/*Character ch = new Character('$');
 		BigInteger bi = new BigInteger("1111111111111111111111111111111111");
 		
 		StackSecure ssObj = new StackSecure();
@@ -23,7 +23,7 @@ public class StackSecureTest {
 		ssObj.pop();
 		System.out.println(ssObj.print());
 		ssObj.pop();
-		System.out.println(ssObj.print());
+		System.out.println(ssObj.print());*/
 		
 		// Push 10 string onto stack
 		StackSecure zachsStack = new StackSecure();
@@ -34,17 +34,17 @@ public class StackSecureTest {
 			zachsStack.push(s);
 			System.out.println(zachsStack.print());
 		}
-		
 		//Peek
 		System.out.println("Peeking into stack");
 		System.out.println(zachsStack.peek() + "\n");
 		
-		// pops strings off stack
+		
+		/*// pops strings off stack
 		System.out.println("Pop strings:");
 		for(int i = 1; i < 11; i++) {
 			zachsStack.pop();
 			System.out.println(zachsStack.print());
-		}
+		}		*/
 	}
 	
 	
