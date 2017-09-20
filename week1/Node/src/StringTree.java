@@ -13,11 +13,11 @@ private TreeNodeString root;
 	/*
 	 * Insert Node
 	 */
-	public void insertNode(TreeNodeString t, String d) {
+	/*public void insertNode(TreeNodeString t, String d) {
 		if(d.compareTo(t.getKey())) {
 		
 		}
-	}
+	}*/
 	
 	/*
 	 * Traverse the entire tree

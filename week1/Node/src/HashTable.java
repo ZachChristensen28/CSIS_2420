@@ -24,6 +24,36 @@
  *  752 34 5679 mod 150,107 = result of the index
  * 
  */
+/*
+ * Collisions:
+ * -When two keys hash to the same value.
+ * fix: collision resolution by chaining
+ * 
+ * The hash function always uses mod for ints. Very fast
+ */
 public class HashTable {
-	
+	public static void main (String[] args) {
+		List[] hashTable = new List[23];
+		int key;
+		int value;
+		
+		for(int i = 0; i < 23; i++) {
+			hashTable[i] = new List();
+		}
+		
+		for(int i = 0; i < 15; i++) {
+			value = (int)(Math.random()*1000);
+			key = value % 23;
+			hashTable[key].insertAtFront(value);
+		}
+		
+		for(int i = 0; i < 23; i++) {
+			System.out.println("index " + i + ": " + hashTable[i].print());
+		}
+
+		int max = Integer.MAX_VALUE;
+		for (int i = (max - 1); (i - 10) < max; i++) {
+			System.out.println(i);
+		}
+	}
 }
