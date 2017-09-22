@@ -21,6 +21,9 @@ public class TreeNodeTest {
 		System.out.println("Root: " + root.getKey());
 		System.out.println("Left: " + root.getLeft().getKey());
 		System.out.println("Right: " + root.getRight().getKey());
+		
+		
+		
 	}
 
 }

@@ -41,4 +41,27 @@ public class Tree {
 		System.out.println(node.getKey() + " ");
 		inOrderTraversal(node.getRight());
 	}
+	/*
+	 * Maximum value in the tree
+	 */
+	public void max(TreeNode node, int max) {
+		if(node == null) {
+			System.out.println("The max value in the tree is: " + max);
+			return;
+		}
+		max(node.getRight(), node.getKey());
+	}
+	/*
+	 * Minimum value in the tree
+	 * @param TreeNode {node}
+	 * @param min {int}
+	 */
+	public void min(TreeNode node, int min) {
+		if(node == null) {
+			System.out.println("The min value in the tree is: " + min);
+			return;
+		}
+		min(node.getLeft(), node.getKey());
+	}
+	
 }

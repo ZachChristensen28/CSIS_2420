@@ -8,18 +8,33 @@ public class TreeTest {
 	public static void main(String[] args) {
 		
 		int n;
-		Tree myTree = new Tree(500);
+		Tree myTree = new Tree(500000);
 		
-		for (int i = 1; i <= 100; i++) {
-			n = (int)(Math.random()*1000);
-			System.out.println(n + " ");
+		for (int i = 1; i < 1000000; i++) {
+			n = (int)(Math.random()*1000000000);
+			//System.out.println(n + " ");
 			myTree.insertNode(myTree.getRoot(), n);
 		}
 		
-		//System.out.println("\n" + myTree.getRoot().getKey());
-		System.out.println("\n after inOrderTraversal");
+		myTree.max(myTree.getRoot(), myTree.getRoot().getKey());
+		myTree.min(myTree.getRoot(), myTree.getRoot().getKey());
 		
+		
+		
+		
+		
+		
+		//System.out.println(myTree.getRoot().getKey());
+		
+/*		System.out.println("inOrderTraversal");
+
+		long start = System.currentTimeMillis();
 		myTree.inOrderTraversal(myTree.getRoot());
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Total Time: " + (end - start) + "ms");*/
+		
+		
 	}
 
 }

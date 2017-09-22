@@ -55,7 +55,17 @@ public class TreeNode {
 	public void setRight(TreeNode right) {
 		this.right = right;
 	}
-	
+	/*
+	 * Traverse the entire tree
+	 */
+	public void inOrderTraversal(TreeNode node) {
+		if(node == null) {
+			return ;
+		}
+		inOrderTraversal(node.getLeft());
+		System.out.println(node.getKey() + " ");
+		inOrderTraversal(node.getRight());
+	}
 	
 	
 }

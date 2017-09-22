@@ -1,36 +1,40 @@
 @import 'fonts';
-html{
-    body{
-        margin: 0;
-        padding: 0;
-        padding-bottom: 30px;
-        font-family: $body;
-        color: $medium-gray;
-    }
+
+html {
+  body {
+    margin: 0;
+    padding: 0 0 30px;
+    font-family: $body;
+    color: $medium-gray;
+  }
 }
 
-h1{
-    font-family: $heading;
-    font-size: 34px;
-    color: $dark-blue;
-}
-h1 small{
+h1 {
+  font-family: $heading;
+  font-size: 34px;
+  color: $dark-blue;
+
+  small {
     font-size: 28px;
-}
-h2{
-    font-family: $heading;
-    font-size: 26px;
-    color: $dark-gray;
+  }
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+h2 {
+  font-family: $heading;
+  font-size: 26px;
+  color: $dark-gray;
 }
-a:hover{
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
     color: $light-gray;
+  }
 }
-pre{
-    font-family: $code;
-    font-size: 14px;
+
+pre {
+  font-family: $code;
+  font-size: 14px;
 }
