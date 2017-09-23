@@ -28,7 +28,7 @@ var options = {
     '> 1% in US'
   ],
 
-}
+};
 
 
 
@@ -47,15 +47,15 @@ gulp.task('default', ['clean', 'build']);
 
 
 
-gulp.task('clean', function (callback) {
-  del(options.paths.output + '/?**', function () {
+gulp.task('clean', function(callback) {
+  del(options.paths.output + '/?**', function() {
     callback(); // No-op; helps gulp manage concurrency.
   });
 });
 
 
 
-gulp.task('build', ['clean'], function () {
+gulp.task('build', ['clean'], function() {
   return gulp.src(options.globs.input, {
       base: 'scss'
     })
@@ -66,11 +66,11 @@ gulp.task('build', ['clean'], function () {
     .pipe(clean(options.cleanup))
 
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(options.paths.output + '/css'))
+    .pipe(gulp.dest(options.paths.output + '/'))
 });
 
 
-gulp.task('doc', ['default'], function () {});
+gulp.task('doc', ['default'], function() {});
 
 
 
@@ -79,7 +79,7 @@ gulp.task('doc', ['default'], function () {});
 
 
 
-gulp.task('watch', ['default'], function () {
+gulp.task('watch', ['default'], function() {
   util.log('Press Ctrl+C to end watch.');
   gulp.watch([options.globs.input], ['default']);
 });

@@ -7,7 +7,7 @@
 
   <title>CSIS 2420 | Zachary Christensen</title>
 
-  <link rel="stylesheet" href="assets/css/main/css/main.css">
+  <link rel="stylesheet" href="assets/css/main/main.css" type="text/css">
 
   <!--Hello Fellow Nerd! This website was created for the sole purpose to show my CSIS 2420 classwork. A pointless yet fun project to practice the techniques of css grid.-->
 </head>
@@ -15,11 +15,11 @@
 <body>
   <div class="site-container">
     <div class="grid">
-      <h1 class="heading">Zachary Christensen <br><small>CSIS 2420 Weekly Assignments <br><a href="mailto:zacharychristensen@suumail.net">zacharychristensen@suumail.net</a></small></h1>
-      <h2 class="week1-title">Week 1 <i class="fa fa-plus-square" aria-hidden="true"></i></h2>
-      <div class="week1-work" style="display: none;">
-        <p class="week1ex1">Ex 1:&nbsp;&nbsp;For each of these pre-computer data structures, describe the problems they solve and any associated algorithms they use. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week1" style="display: none;" class="week-work">
+      <h1>Zachary Christensen <br><small>CSIS 2420 Weekly Assignments <br><a href="mailto:zacharychristensen@suumail.net">zacharychristensen@suumail.net</a></small></h1>
+      <h2 class="weekly-title">Week 1 <i class="fa fa-plus-square" aria-hidden="true"></i></h2>
+      <div class="weekly-work" style="display: none;">
+        <p>Ex 1:&nbsp;&nbsp;For each of these pre-computer data structures, describe the problems they solve and any associated algorithms they use. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <ul>
             <li>List: Takes something that is disorganized and makes it more organized in the format of a list of items. </li>
             <li>Chart: Displays data in a more visually appealing way to help with organization.</li>
@@ -33,90 +33,119 @@
           <p>Big Factorial</p>
           <img src="assets/img/bigFactorialSnapshot.png" width="900px" alt="Big Factorial Work">
         </div>
-        <p class="week1ex2">Ex 2:&nbsp;&nbsp;Test your environment by writing a static method that takes positive integer n as input and outputs an array of n random integers in the range 0 → 1,000,000. Test this method by calling it on n = 100 and printing the result.
+        <p>Ex 2:&nbsp;&nbsp;Test your environment by writing a static method that takes positive integer n as input and outputs an array of n random integers in the range 0 → 1,000,000. Test this method by calling it on n = 100 and printing the result.
           <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
-        <div id="week1ex2-work" style="display: none;" class="week-work">
+        <div style="display: none;" class="examples">
           <img src="assets/img/week1ex2.png" width="500px" alt="Week 1 problem 2 code">
           <img src="assets/img/week1ex2compiled.png" width="300px" alt="Week 1 problem 2 compiled code">
         </div>
-        <p class="week1ex3">Ex 3:&nbsp;&nbsp;Using only the Node class, build a linked list that stores all the squares from 1 to 100. Then migrate through the list and print out the squares. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week1ex3-work" style="display: none;" class="week-work">
+        <p>Ex 3:&nbsp;&nbsp;Using only the Node class, build a linked list that stores all the squares from 1 to 100. Then migrate through the list and print out the squares. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/1-50.png" alt="Terminal Node 1 - 50" height="700">
           <img src="assets/img/50-100.png" alt="Terminal Node 50 - 100" height="700">
           <img src="assets/img/ex3code.png" alt="Code for Node">
-          <pre>
-          public class NodeTest {
-
-          	public static void main(String[] args) {
-
-          		Node n[] = new Node[101];
-
-          		for (int i = 100; i > 0; i--) {
-          			for(int j = i; j > 0; j--) {
-          				int x = j * j;
-          				n[j] = new Node(x);
-          			}
-          			n[i].setNext(n[i - 1]);
-          		}
-          		System.out.println("Node 100: " + n[100].getObject());
-          		for (int i = 100; i > 1; i--) {
-          			int counter = i - 1;
-          			System.out.println("Node " + counter  + ": "
-          			+ n[i].getNext().getObject());
-          		}
-          	}
-          }
-        </pre>
         </div>
       </div>
-      <h2 class="week2-title">Week 2 <i class="fa fa-minus-square" aria-hidden="true"></i></h2>
-      <div class="week2-work">
-        <p class="week2ex1">Ex 1:&nbsp;&nbsp;Add the following method to the List code developed in class: insertAtBack(). <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex1-work" style="display: none;" class="week-work">
+      <h2 class="weekly-title">Week 2 <i class="fa fa-minus-square" aria-hidden="true"></i></h2>
+      <div class="weekly-work" style="display:none;">
+        <p>Ex 1:&nbsp;&nbsp;Add the following method to the List code developed in class: insertAtBack(). <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex1.PNG" alt="Week 2 example 1 work">
           <img src="assets/img/week2ex1test.PNG" alt="Week 2 example 1 work">
           <img src="assets/img/week2ex1console.PNG" alt="Week 2 example 1 work">
         </div>
-        <p class="week2ex2">Ex 2:&nbsp;&nbsp;Add the following method to the List code developed in class: removeFromBack(). <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex2-work" style="display: none;" class="week-work">
+        <p>Ex 2:&nbsp;&nbsp;Add the following method to the List code developed in class: removeFromBack(). <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex2.PNG" alt="Week 2 example 2 work">
           <img src="assets/img/week2ex2test.PNG" alt="Week 2 example 2 work">
           <img src="assets/img/week2ex2console.PNG" alt="Week 2 example 2 work">
         </div>
-        <p class="week2ex3">Ex 3:&nbsp;&nbsp;Create a list and fill it with the squares from 1 to 100, then print out the contents. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex3-work" style="display: none;" class="week-work">
+        <p>Ex 3:&nbsp;&nbsp;Create a list and fill it with the squares from 1 to 100, then print out the contents. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex3.PNG" alt="Week 2 example 3 work">
           <img src="assets/img/week2ex3console.PNG" alt="Week 2 example 3 work">
         </div>
-        <p class="week2ex4">Ex 4:&nbsp;&nbsp;Have the last node of the List in ex. 3 point to the first node. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex4-work" style="display: none;" class="week-work">
+        <p>Ex 4:&nbsp;&nbsp;Have the last node of the List in ex. 3 point to the first node. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex4.PNG" alt="Week 2 example 4 work">
           <img src="assets/img/week2ex4console1.PNG" alt="Week 2 example 4 work">
           <img src="assets/img/week2ex4console2.PNG" alt="Week 2 example 4 work">
         </div>
-        <p class="week2ex5">Ex 5:&nbsp;&nbsp;Add and test a method for the List class which returns the size of the list. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex5-work" style="display: none;" class="week-work">
+        <p>Ex 5:&nbsp;&nbsp;Add and test a method for the List class which returns the size of the list. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex5.PNG" alt="Week 2 example 5 work">
           <img src="assets/img/week2ex5test.PNG" alt="Week 2 example 2 work">
           <img src="assets/img/week2ex5console.PNG" alt="Week 2 example 5 work">
         </div>
-        <p class="week2ex6">Ex 6:&nbsp;&nbsp;Write a test driver for the second version of the Stack class and verify all the methods work. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex6-work" style="display: none;" class="week-work">
+        <p>Ex 6:&nbsp;&nbsp;Write a test driver for the second version of the Stack class and verify all the methods work. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex6.PNG" alt="Week 2 example 6 work">
           <img src="assets/img/week2ex6console.PNG" alt="Week 2 example 6 work">
         </div>
-        <p class="week2ex7">Ex 7:&nbsp;&nbsp;Write code that pushes 10 strings onto the stack (version 2 of the stack), printing while it goes, then pops them off, printing while it removes. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex7-work" style="display: none;" class="week-work">
+        <p>Ex 7:&nbsp;&nbsp;Write code that pushes 10 strings onto the stack (version 2 of the stack), printing while it goes, then pops them off, printing while it removes. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex7.PNG" alt="Week 2 example 7 work">
           <img src="assets/img/week2ex7console1.PNG" alt="Week 2 example 7 work">
           <img src="assets/img/week2ex7console1.PNG" alt="Week 2 example 7 work">
         </div>
-        <p class="week2ex8">Ex 8:&nbsp;&nbsp; In the Stack2 class, add a “peek()” method that only returns the object at the top of the stack. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
-        <div id="week2ex8-work" style="display: none;" class="week-work">
+        <p>Ex 8:&nbsp;&nbsp; In the Stack2 class, add a “peek()” method that only returns the object at the top of the stack. <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+        <div style="display: none;" class="examples">
           <img src="assets/img/week2ex8.PNG" alt="Week 2 example 8 work">
           <img src="assets/img/week2ex8test.PNG" alt="Week 2 example 8 work">
           <img src="assets/img/week2ex8console.PNG" alt="Week 2 example 8 work">
+        </div>
+      </div>
+      <h2 class="weekly-title">Week 3 <i class="fa fa-minus-square" aria-hidden="true"></i></h2>
+      <div class="weekly-work">
+        <p>Ex 1: Test the Queue implementation we did in class using inheritance. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <img src="assets/img/week3/ex1.PNG" alt="Problem 1">
+          <img src="assets/img/week3/ex1console.PNG" alt="Problem 1 Console">
+        </div>
+        <p>Ex 2: Write a Queue class using composition, and write an appropriate test driver. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none">
+          <img src="assets/img/week3/ex2.PNG" alt="Problem 2">
+          <img src="assets/img/week3/ex2console.PNG" alt="Problem 2 Console">
+        </div>
+        <p>Ex 3: Use your code from week 1 to generate 15 random ints in the range 0 to 1000 and print them. Draw by hand <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <img src="assets/img/week3/ex3.jpeg" alt="Problem 3">
+          <img src="assets/img/week3/ex3console.PNG" alt="Problem 3 Console">
+        </div>
+        <p>Ex 4: Write a method that prints out all the keys in a binary search tree. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <img src="assets/img/week3/ex4.PNG" alt="Problem 4"><img src="assets/img/week3/ex4console.PNG" alt="Problem 4 Console">
+        </div>
+        <p>Ex 5: Generate 1000 random ints in the range 0 to 1 million, print them in the order they are generated and insert them into the tree. <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <img src="assets/img/week3/ex5.PNG" alt="Problem 5"><img src="assets/img/week3/ex5console.PNG" alt="Problem 5 Console">
+        </div>
+        <p>Ex 6: How many nodes does a balanced binary tree with 20 levels have? How many different shades of red can we express with 8 bits? <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <ul>
+            <li>2^20 = 1,048,576 nodes.</li>
+            <li>2^8 = 256 colors.</li>
+          </ul>
+        </div>
+        <p>Ex 7: How many memory positions can you access with a 32 bit bus? What about a 64 bit bus? How many colors can be expressed if you have 8 bits for red, 8 for green and 8 for blue? <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <ul>
+            <li>2^32 = 4,294,967,296 or 4Giga</li>
+            <li>2^64 = 16 Exa</li>
+            <li>2^24 = 16,777,216 or 24Mega</li>
+          </ul>
+        </div>
+        <p>Ex 8: The IRS needs a balanced binary search tree with 450 million records. How many levels are required? <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <ul>
+            <li>2^29, 29 levels would be required</li>
+          </ul>
+        </div>
+        <p>Ex 9: Add and test these methods to the (integer) Tree class: <i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <div style="display:none;">
+          <img src="assets/img/week3/ex9.PNG" alt="Problem 9"><img src="assets/img/week3/ex9a.PNG" alt="Problem 9"><img src="assets/img/week3/ex9aconsole.PNG" alt="Problem 9">
         </div>
       </div>
     </div>
