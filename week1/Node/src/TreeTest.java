@@ -8,10 +8,10 @@ public class TreeTest {
 	public static void main(String[] args) {
 		
 		int n;
-		Tree myTree = new Tree(500000);
+		Tree myTree = new Tree(4);
 		
 		for (int i = 1; i < 1000000; i++) {
-			n = (int)(Math.random()*1000000000);
+			n = (int)(Math.random()*6);
 			//System.out.println(n + " ");
 			myTree.insertNode(myTree.getRoot(), n);
 		}
@@ -19,6 +19,11 @@ public class TreeTest {
 		myTree.max(myTree.getRoot(), myTree.getRoot().getKey());
 		myTree.min(myTree.getRoot(), myTree.getRoot().getKey());
 		
+		if(myTree.findKey(myTree.getRoot(), 2)) {
+			System.out.println("yes");
+		} else {
+			System.out.println("no");
+		}
 		
 		
 		
