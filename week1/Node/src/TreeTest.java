@@ -25,7 +25,7 @@ public class TreeTest {
 			System.out.println("no");
 		}*/
 		
-		boolean x = myTree.findKey(myTree.getRoot(), 10);
+		boolean x = myTree.findKey(myTree.getRoot(), 5);
 		
 		if(x) {
 			System.out.println("yes");

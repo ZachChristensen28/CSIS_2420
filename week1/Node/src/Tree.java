@@ -76,15 +76,15 @@ public class Tree {
 	public boolean findKey(TreeNode t, int key) {
 		if (key == t.getKey()) {
 			return true;
-			
+
 		} else {
-			if(key < t.getKey()) {
-				if(t.getLeft() == null) {
+			if (key < t.getKey()) {
+				if (t.getLeft() == null) {
 				} else {
 					findKey(t.getLeft(), key);
 				}
 			} else {
-				if(t.getRight() == null) {
+				if (t.getRight() == null) {
 					return false;
 				} else {
 					findKey(t.getRight(), key);
@@ -94,9 +94,3 @@ public class Tree {
 		}
 	}
 }
-/*
- * 
- * 1. Add a find(key) method to the (integer) Tree class which returns true if
- * the key is in the Tree and false if key is not in the tree (Hint: most of the
- * code you need is in insertNode()).
- */
