@@ -19,7 +19,7 @@ public class TreeTest {
 		myTree.max(myTree.getRoot(), myTree.getRoot().getKey());
 		myTree.min(myTree.getRoot(), myTree.getRoot().getKey());
 		
-		if(myTree.findKey(myTree.getRoot(), 2)) {
+		if(myTree.findKey(myTree.getRoot(), 5)) {
 			System.out.println("yes");
 		} else {
 			System.out.println("no");

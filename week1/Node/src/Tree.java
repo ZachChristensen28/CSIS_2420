@@ -73,11 +73,13 @@ public class Tree {
 	 * 
 	 * @return Boolean
 	 */
-	public Boolean findKey(TreeNode t, int key) {
-		if (key != t.getKey()) {
+	public boolean findKey(TreeNode t, int key) {
+		if (key == t.getKey()) {
+			return true;
+			
+		} else {
 			if(key < t.getKey()) {
 				if(t.getLeft() == null) {
-					return false;
 				} else {
 					findKey(t.getLeft(), key);
 				}
@@ -88,9 +90,6 @@ public class Tree {
 					findKey(t.getRight(), key);
 				}
 			}
-			return false;
-		} else {
-			return true;
 		}
 	}
 }
