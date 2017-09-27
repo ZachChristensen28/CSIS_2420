@@ -71,7 +71,7 @@ public class Tree {
 	/**
 	 * Find Key Method
 	 * 
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public boolean findKey(TreeNode t, int key) {
 		if (key == t.getKey()) {
@@ -90,6 +90,7 @@ public class Tree {
 					findKey(t.getRight(), key);
 				}
 			}
+			return false;
 		}
 	}
 }

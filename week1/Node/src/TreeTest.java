@@ -19,12 +19,19 @@ public class TreeTest {
 		myTree.max(myTree.getRoot(), myTree.getRoot().getKey());
 		myTree.min(myTree.getRoot(), myTree.getRoot().getKey());
 		
-		if(myTree.findKey(myTree.getRoot(), 5)) {
+		/*if(myTree.findKey(myTree.getRoot(), 5) == true) {
+			System.out.println("yes");
+		} else {
+			System.out.println("no");
+		}*/
+		
+		boolean x = myTree.findKey(myTree.getRoot(), 10);
+		
+		if(x) {
 			System.out.println("yes");
 		} else {
 			System.out.println("no");
 		}
-		
 		
 		
 		
