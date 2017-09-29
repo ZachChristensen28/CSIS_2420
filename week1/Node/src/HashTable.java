@@ -33,27 +33,28 @@
  */
 public class HashTable {
 	public static void main (String[] args) {
-		List[] hashTable = new List[23];
+		int primeNumber = 157;
+		List[] hashTable = new List[primeNumber];
 		int key;
 		int value;
 		
-		for(int i = 0; i < 23; i++) {
+		for(int i = 0; i < hashTable.length; i++) {
 			hashTable[i] = new List();
 		}
 		
-		for(int i = 0; i < 15; i++) {
-			value = (int)(Math.random()*1000);
-			key = value % 23;
+		for(int i = 0; i < 101; i++) {
+			value = (int)(Math.random()*1000000);
+			key = value % primeNumber;
 			hashTable[key].insertAtFront(value);
 		}
 		
-		for(int i = 0; i < 23; i++) {
+		for(int i = 0; i < hashTable.length; i++) {
 			System.out.println("index " + i + ": " + hashTable[i].print());
 		}
 
-		int max = Integer.MAX_VALUE;
+/*		int max = Integer.MAX_VALUE;
 		for (int i = (max - 1); (i - 10) < max; i++) {
 			System.out.println(i);
 		}
-	}
+*/	}
 }
