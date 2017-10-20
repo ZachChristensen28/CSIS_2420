@@ -44,30 +44,39 @@ public class Graph {
 	private Vertex vertexList[];
 	private int nVerts;
 	private int adjMat[][];
+	private int weight[][];
+	private int numOfEdges;
+	private int numOfVertices;
 
 	public Graph() {
 		vertexList = new Vertex[maxVerts];
 		adjMat = new int[maxVerts][maxVerts];
+		weight = new int[maxVerts][maxVerts];
 		nVerts = 0;
 
 		for (int i = 0; i < maxVerts; i++) {
 			for (int j = 0; j < maxVerts; j++) {
 				adjMat[i][j] = 0;
+				weight[i][j] = 0;
 			}
 		}
 	}
 
 	public void addVertex(String label) {
 		vertexList[nVerts++] = new Vertex(label);
+		numOfVertices++;
 	}
 
-	public void addEdge(int start, int end) {
+	public void addEdge(int start, int end, int weight) {
 		adjMat[start][end] = 1;
 		adjMat[end][start] = 1;
+		this.weight[start][end] = weight;
+		this.weight[end][start] = weight;
+		numOfEdges++;
 	}
 
 	public void displayVertices() {
-		System.out.println("Here are the vertices: ");
+		System.out.println("Here are the vertices: " + numOfVertices);
 
 		for (int i = 0; i < nVerts; i++) {
 			System.out.println(vertexList[i].getLabel());
@@ -75,12 +84,13 @@ public class Graph {
 	}
 
 	public void displayEdges() {
-		System.out.println("Here are the edges:");
+		System.out.println("Here are the edges: " + numOfEdges);
 
 		for (int i = 0; i < nVerts; i++) {
 			for (int j = 0; j < nVerts; j++) {
 				if (adjMat[i][j] == 1) {
-					System.out.println(vertexList[i].getLabel() + " -- " + vertexList[j].getLabel());
+					System.out.println(
+							vertexList[i].getLabel() + " -- " + vertexList[j].getLabel() + " Weight: " + weight[i][j]);
 				}
 			}
 		}

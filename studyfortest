@@ -1,0 +1,254 @@
+/**
+ * LIST
+ */
+/*
+ * Insert Item at Front
+ *
+ * @param Object
+ */
+public void insertAtFront(Object insertItem) {
+  if (isEmpty()) {
+    firstNode = lastNode = new Node(insertItem);
+  } else {
+    firstNode = new Node(insertItem, firstNode);
+  }
+}
+
+/*
+ * Insert Item at Back
+ *
+ * @param Object
+ */
+public void insertAtBack(Object insertItem) {
+  counter++;
+  if (isEmpty()) {
+    firstNode = lastNode = new Node(insertItem);
+  } else {
+    lastNode.setNext(new Node(insertItem));
+    lastNode = lastNode.getNext();
+  }
+}
+
+/*
+ * Remove from front of list
+ *
+ * @return Object
+ */
+public Object removeFromFront() {
+  Object removeItem = null;
+  if (isEmpty()) {
+    removeItem = "This List is empty.";
+    return removeItem;
+  }
+  removeItem = firstNode.getObject();
+  if (firstNode.equals(lastNode)) {
+    firstNode = lastNode = null;
+  } else {
+    firstNode = firstNode.getNext();
+  }
+  return removeItem;
+}
+
+/*
+ * Remove from Back of list
+ *
+ * @return Object
+ */
+public Object removeFromBack() {
+  Object removeItem = null;
+  if (isEmpty()) {
+    removeItem = "This List is empty.";
+    return removeItem;
+  }
+  removeItem = lastNode.getObject();
+  if (firstNode.equals(lastNode)) {
+    firstNode = lastNode = null;
+  } else {
+    Node current = firstNode;
+    Node before = null;
+    while (current.getNext() != null) {
+      before = current;
+      current = current.getNext();
+    }
+    before.setNext(current.getNext());
+    lastNode = before;
+  }
+  return removeItem;
+}
+/*
+ * prints the count
+ */
+public String printCount() {
+  //counter is global private variable
+  return "Number of elements: " + counter;
+}
+/*
+ * Print List
+ *
+ * @return String
+ */
+public String print() {
+  String result = "";
+  String newLine = "\n";
+  if (isEmpty()) {
+    result += name + " is Empty" + newLine;
+    return result;
+  }
+  Node current = firstNode;
+  while (current != null) {
+    result += current.getObject() + newLine;
+    current = current.getNext();
+  }
+  return result;
+}
+
+/**
+ * Stack
+ */
+ public class StackSecure {
+ 	/*
+ 	 * Declare Private Lists and use only those methods we need.
+ 	 */
+ 	private List s;
+
+ 	public StackSecure() {
+ 		s  = new List("The Secure Stack");
+ 	}
+
+ 	public void push(Object obj) {
+ 		s.insertAtFront(obj);
+ 	}
+
+ 	public Object pop() {
+ 		return s.removeFromFront();
+ 	}
+
+ 	public boolean isEmpty() {
+ 		return s.isEmpty();
+ 	}
+
+ 	public Object peek() {
+ 		return s.getFirstNode().getObject();
+ 	}
+
+ 	/*
+ 	 * Create for temp use
+ 	 */
+ 	public String print() {
+ 		return s.print();
+ 	}
+
+ }
+
+/**
+ * Tree
+ */
+ /*
+ 	 * Traverse the entire tree
+ 	 */
+ 	public void inOrderTraversal(TreeNode node) {
+ 		if (node == null) {
+ 			return;
+ 		}
+ 		inOrderTraversal(node.getLeft());
+ 		System.out.println(node.getKey() + " ");
+ 		inOrderTraversal(node.getRight());
+ 	}
+  /**
+	 * Find Key Method
+	 *
+	 * @return boolean
+	 */
+	public boolean findKey(TreeNode t, int key) {
+		if (key == t.getKey()) {
+			return true;
+
+		} else {
+			if (key < t.getKey()) {
+				if (t.getLeft() == null) {
+				} else {
+					findKey(t.getLeft(), key);
+				}
+			} else {
+				if (t.getRight() == null) {
+					return false;
+				} else {
+					findKey(t.getRight(), key);
+				}
+			}
+			return false;
+		}
+	}
+  /*
+	 * Insert Node
+	 */
+	public void insertNode(TreeNode t, int d) {
+		if (d < t.getKey()) {
+			if (t.getLeft() == null) {
+				t.setLeft(new TreeNode(d));
+			} else {
+				insertNode(t.getLeft(), d);
+			}
+		} else if (d > t.getKey()) {
+			if (t.getRight() == null) {
+				t.setRight(new TreeNode(d));
+			} else {
+				insertNode(t.getRight(), d);
+			}
+		}
+	}
+  /**
+   * Hash Table
+   */
+   public class HashTable {
+ 	public static void main (String[] args) {
+ 		int primeNumber = 157;
+ 		List[] hashTable = new List[primeNumber];
+ 		int key;
+ 		int value;
+
+ 		for(int i = 0; i < hashTable.length; i++) {
+ 			hashTable[i] = new List();
+ 		}
+
+ 		for(int i = 0; i < 101; i++) {
+ 			value = (int)(Math.random()*1000000);
+ 			key = value % primeNumber;
+ 			hashTable[key].insertAtFront(value);
+ 		}
+
+ 		for(int i = 0; i < hashTable.length; i++) {
+ 			System.out.println("index " + i + ": " + hashTable[i].print());
+ 		}
+
+ /*		int max = Integer.MAX_VALUE;
+ 		for (int i = (max - 1); (i - 10) < max; i++) {
+ 			System.out.println(i);
+ 		}
+ */	}
+ }
+  /*
+String
+   */
+   public static void main(String[] args) {
+   		String[] names = { "josh", "Anna", "jeff", "theobald", "leet", "thom", "phil", "carls", "said",
+   				"courtney", "kevin", "cj", "kayd", "trav", "zach" };
+   		int primeNumber = 31;
+   		List[] hashTable = new List[primeNumber];
+   		int key;
+   		int value;
+
+   		for (int i = 0; i < hashTable.length; i++) {
+   			hashTable[i] = new List();
+   		}
+
+   		for (int i = 0; i < names.length; i++) {
+   			value = (int)(names[i].hashCode());
+   			key = (int)(value % primeNumber);
+   			hashTable[key].insertAtFront(value);
+   		}
+
+   		for(int i = 0; i < hashTable.length; i++) {
+   			System.out.println("index " + i + ": " + hashTable[i].print());
+   		}
+    }
