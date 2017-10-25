@@ -1,0 +1,11 @@
+import java.util.*;
+public class LinkedListHomework {
+
+	public static void main(String[] args) {
+		LinkedList<Integer> myList1 = new LinkedList<Integer>(); // Specify which <object> will be in the Linked List
+		LinkedList<Integer> myList2 = new LinkedList<Integer>();
+		LinkedList<Integer> myList3 = new LinkedList<Integer>();
+
+	}
+
+}
