@@ -6,7 +6,7 @@ public class FileToString02 {
     System.out.println(data);
   }
 
-  public static String fileToString (String fileName) {
+  public static String FileToString (String fileName) {
     String result = "";
     try {
       FileInputStream file = new FileInputStream(fileName);

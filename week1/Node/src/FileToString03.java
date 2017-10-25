@@ -12,7 +12,7 @@ public class FileToString03 {
     }
   }
 
-  public static String fileToString (String fileName) {
+  public static String FileToString (String fileName) {
     String result = "";
     try {
       FileInputStream file = new FileInputStream(fileName);

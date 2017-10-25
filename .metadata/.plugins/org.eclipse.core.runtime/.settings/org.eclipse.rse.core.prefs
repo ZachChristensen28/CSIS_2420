@@ -1,3 +1,4 @@
+activeuserprofiles=Team;retupmoc;webservices-imac
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=webstudent
-useridperkey=webservices-imac.Local\=webstudent;
+useridperkey=webservices-imac.Local\=webstudent;retupmoc.Local\=webstudent;
