@@ -37,6 +37,8 @@ public class countwords {
 		Integer value;
 		Iterator<String> it = wordList.iterator();
 
+		long start = System.currentTimeMillis();
+		
 		while (it.hasNext()) {
 			key = it.next();
 			value = tm.get(key);
@@ -57,5 +59,8 @@ public class countwords {
 				System.out.println(key + " -> " + value);
 			}
 		}
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Total time: " + (end - start) + "ms");
 	}
 }
