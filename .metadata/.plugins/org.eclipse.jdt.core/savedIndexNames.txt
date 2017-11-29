@@ -1,28 +1,7 @@
-INDEX VERSION 1.130+/Users/webstudent/Documents/GitHub/CSIS_2420/.metadata/.plugins/org.eclipse.jdt.core
-2842472240.index
-1180484879.index
-1833648217.index
-145268399.index
-1690311816.index
-206535591.index
-1384487945.index
-2345560674.index
-156905802.index
-1699738662.index
-3712507179.index
-3321539481.index
-3126888922.index
-3302703152.index
-2362891960.index
-2176505775.index
-3619427458.index
-3277980169.index
-1819685514.index
-2545238116.index
-3266567714.index
-88183214.index
-1271342938.index
-2583270963.index
-3175304630.index
-853707784.index
-1097848872.index
+INDEX VERSION 1.130+C:\Users\retupmoc\Documents\GitHub\CSIS_2420\.metadata\.plugins\org.eclipse.jdt.core
+1070091696.index
+1283954658.index
+471871208.index
+565767664.index
+340781404.index
+1714068069.index

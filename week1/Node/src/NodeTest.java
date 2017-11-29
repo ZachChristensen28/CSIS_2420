@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /**
  * 
  * @author zacharychristensen
@@ -6,8 +8,6 @@
 public class NodeTest {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		
 		
 		Character ch = new Character('$');
 		BigInteger bi = new BigInteger("1234567891011121314151617181920");
@@ -22,7 +22,7 @@ public class NodeTest {
 		System.out.println(n1.getObject());
 		System.out.println(n2.getObject());
 		System.out.println(n2.getNext().getObject());
-=======
+
 
 		Node n[] = new Node[101];
 
@@ -38,6 +38,5 @@ public class NodeTest {
 			int counter = i - 1;
 			System.out.println("Node " + counter  + ": " + n[i].getNext().getObject());
 		}
->>>>>>> e96d0db1670441ddb3c08ea799baf3cb2e2ccf40
 	}
 }

@@ -1,7 +1,7 @@
 
 public class StringTest {
 	public static void main (String[] args) {
-		String [] a = {"From","its","founding","in","1897,","Southern","Utah","University",
+		String [] a = {"From","its","founding","in","1897","Southern","Utah","University",
 		"has","evolved","from","a","teacher","training","institution","to","now","becoming",
 		"Utah's","designated"};
 		
